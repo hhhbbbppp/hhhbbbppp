@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 struct triangle {
     float a, b, c, d, e;
     triangle(float aa, float bb) :a(aa), b(bb) {
@@ -8,6 +9,7 @@ struct triangle {
         e = 0.5 * a * b; // 면적
     }
 };
+
 void main() {
     float l1, l2;
     cout << "삼각형의 두변의 길이를 각각 입력하시오" << endl;
