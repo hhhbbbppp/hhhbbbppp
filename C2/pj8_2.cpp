@@ -20,7 +20,7 @@ void main() {
 	young.height = doug.height + 14;
 	young.weight = doug.weight + 30;
 
-	// sizeof(student) = (2+4+4+4)+2 = 16
+	// sizeof(student) = 2+(2)+4+4+4 = 16
 	cout << " " << sizeof(student) << endl;
 	cout << " " << young.weight << endl;
 }
