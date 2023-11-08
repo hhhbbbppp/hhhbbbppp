@@ -27,12 +27,9 @@ void draw() {
     else if (keyCode == RIGHT) ccc.move(10);
   }
   bbb.moving(); ccc.moving();
-  fill(0);
-  textSize(24);
-  if (bbb.showText>0) {
+  fill(0); textSize(24);
+  if (bbb.showText>0 || ccc.showText>0) {
     text("ppuka "+"die "+bbb.showText+"time", 200, 100);
-  }
-  if (ccc.showText>0) {
     text("smile "+"die "+ccc.showText+"time", 600, 100);
   }
 }
