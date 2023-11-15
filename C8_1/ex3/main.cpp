@@ -1,5 +1,5 @@
 #include <iostream>
-#include "health2.h"
+#include "CHealth.h"
 using namespace std;
 int main() {
 	CHealth* students = new CHealth[5];
