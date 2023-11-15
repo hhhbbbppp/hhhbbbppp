@@ -15,8 +15,7 @@ int main() {
 	mickey->measureCel();
 
 	cout << VIP.cel << "C " << mario->faren << "F \n";
-	cout << VIP.faren << "F " << mario->cel << "C \n";
+	cout << VIP2.faren << "F " << mickey->cel << "C \n";
 	cout << "size " << sizeof(CHealth) << "\n";
-	getchar();
 	return 1;
 }
