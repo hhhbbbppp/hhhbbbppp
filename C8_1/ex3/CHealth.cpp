@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "health2.h"
+#include "CHealth.h"
 CHealth::CHealth() { 
 	nCHealth++; age = 20; many = age * 3; // many = age * 3 추가
 	beat5min = temp5min = nullptr;
