@@ -4,7 +4,7 @@ using namespace std;
 class Person {
 public:
     Person(int x) {
-        many1 = x; // 값을 추가
+        many1 = x + 1; // 값을 추가
         cout << many1 << endl;
     }
     Person() {
@@ -18,7 +18,7 @@ public:
 class Faculty : virtual public Person {
 public:
     Faculty(int x) : Person(x) {
-        many2 = x; // 값을 추가
+        many2 = x + 2; // 값을 추가
         cout << many2 << endl;
     }
     Faculty() : Person() {
@@ -32,7 +32,7 @@ public:
 class Student : virtual public Person {
 public:
     Student(int x) : Person(x) {
-        many3 = x; // 값을 추가
+        many3 = x + 3; // 값을 추가
         cout << many3 << endl;
     }
     Student() : Person() {
@@ -46,7 +46,7 @@ public:
 class TA : public Faculty, public Student {
 public:
     TA(int x) : Student(x), Faculty(x) {
-        many4 = x; // 값을 추가
+        many4 = x + 4; // 값을 추가
         cout << many4 << endl;
     }
     TA() : Student(), Faculty() {
@@ -58,5 +58,5 @@ public:
 };
 
 int main() {
-    TA ta1(30);
+    TA ta1(100);
 }
