@@ -8,7 +8,7 @@ void main() {
 	// sprint 1
 	int elapsedSeconds = 0, T = 1; // 1초
 	// sprint 2
-	int NI = 50, NO = 10, ni, no; // 패킷 최대 생성,제거 개수
+	int NI = 90, NO = 90, ni, no; // 패킷 최대 생성,제거 개수
 	vector <int> q;
 	// sprint 3-1
 	int capacity = 100; // q 용량
@@ -21,20 +21,20 @@ void main() {
 	int max = 0; // maximum
 
 	while (elapsedSeconds < 120) { // 120초 = 2분
-		Sleep(T * 1000); // 1초마다 대기
+		Sleep(T * 10); // 1초마다 대기
 		elapsedSeconds += T; // 1초씩 증가
 		cout << "Elapsed time[sec] = " << elapsedSeconds << endl;
-		
+
 		// ni만큼 packet 넣기
 		ni = rand() % NI;
-		for (int i = 0; i < ni; i++) {
-			q.push_back(rand());
-		}
 		if (capacity < q.size() + ni) { // overflow
 			lost += q.size() + ni - capacity; // lost
 			ni = capacity - q.size();
 			cout << "overflow, size = " << q.size() + ni << endl;
 			overflow += 1; // overflow count
+		}
+		for (int i = 0; i < ni; i++) {
+			q.push_back(rand() % 20);
 		}
 
 		// no만큼 packet 빼기
@@ -54,7 +54,7 @@ void main() {
 		NofPackets[elapsedSeconds - 1] = q.size();
 		cout << NofPackets[elapsedSeconds - 1] << endl;
 	}
-	
+
 	// confirm overflow, underflow, lost
 	cout << "overflow = " << overflow << endl;
 	cout << "underflow = " << underflow << endl;
