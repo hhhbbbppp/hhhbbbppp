@@ -20,7 +20,7 @@ void qq::FIFO() {
 	int acc = 0; // accumulate lost
 
 	while (elapsedSeconds < 120) { // 120초 = 2분
-		Sleep(T * 10); // 1초마다 대기
+		Sleep(T * 1000); // 1초마다 대기
 		elapsedSeconds += T; // 1초씩 증가
 		cout << "Elapsed time[sec] = " << elapsedSeconds << endl;
 
