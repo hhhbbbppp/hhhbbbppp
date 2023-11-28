@@ -16,12 +16,6 @@ public:
 	int overflow, underflow;
 
 	// member function
-	void FIFO();
-	int getOverflow() const;
-	int getUnderflow() const;
-	int getMax() const;
-	int getAvg() const;
-	int getLost() const;
-	float getLoss() const;
-	float getFull() const;
+	void FIFO(); // FIFO function
+	void show(); // show data
 };
