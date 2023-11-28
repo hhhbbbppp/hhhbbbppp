@@ -20,7 +20,7 @@ void qq::FIFO() {
 	int acc = 0; // accumulate lost
 
 	while (elapsedSeconds < 120) { // 120초 = 2분
-		Sleep(T * 1000); // 1초마다 대기
+		Sleep(T * 10); // 1초마다 대기
 		elapsedSeconds += T; // 1초씩 증가
 		cout << "Elapsed time[sec] = " << elapsedSeconds << endl;
 
@@ -68,30 +68,12 @@ void qq::FIFO() {
 	}
 }
 
-int qq::getOverflow() const {
-	return overflow;
-}
-
-int qq::getUnderflow() const {
-	return underflow;
-}
-
-int qq::getMax() const {
-	return max;
-}
-
-int qq::getAvg() const {
-	return avg;
-}
-
-int qq::getLost() const {
-	return lost;
-}
-
-float qq::getLoss() const {
-	return loss;
-}
-
-float qq::getFull() const {
-	return full;
+void qq::show() {
+	cout << "Overflow = " << overflow << endl;
+	cout << "Underflow = " << underflow << endl;
+	cout << "Maximum = " << max << endl;
+	cout << "Average = " << avg << endl;
+	cout << "Lost = " << lost << endl;
+	cout << "Loss Rate = " << loss << endl;
+	cout << "Queue Fullness = " << full << "%" << endl;
 }
